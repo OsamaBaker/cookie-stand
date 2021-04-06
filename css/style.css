@@ -1,4 +1,75 @@
-table, th, td{
-    border: 1px solid black;
-    border-collapse: collapse;
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+header{
+    background-color: darksalmon;
+    height: 100px;
+    vertical-align: middle;
+    padding: 20px
+}
+
+header span {
+    font-family: sans-serif;
+    vertical-align: middle;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+header img {
+    height: 50px;
+    display: inline;
+    float: left;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li{
+    display: inline;
+    padding-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+footer{
+    background-color: darksalmon;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+footer p {
+    display: inline;
+}
+
+div img{
+    height: 200px;
+}
+
+div span{
+    font-size: 100px;
+    font-family: fantasy;
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}
+
+h3{
+    font-size: 30px;
+    padding: 50px;
+}
+
+p{
+    margin-left: 50px;
 }
