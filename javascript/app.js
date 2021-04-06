@@ -120,19 +120,31 @@ lima.render();
 
 // making footer function
 function makingFooter() {
-    let footerRow = document.createElement('th');
+    let footerRow = document.createElement('tr');
     table.appendChild(footerRow);
-    footerRow.textContent='Totals';
+    let firstTh=document.createElement('th');
+    footerRow.appendChild(firstTh);
+    firstTh.textContent='Totals'
 
+    //making totals
     for (let i = 0; i < hours.length; i++) {
-        let totalsTr = document.createElement('th');
-        table.appendChild(totalsTr);
-        totalsTr.textContent= footerTotal[i];
+        for (let j = 0; j < Location.length; j++) {
+            console.log(hours[i]);
+            console.log(Location[j]);
+            
+        }
+        
+    }
+
+    // for (let i = 0; i < hours.length; i++) {
+    //     let totalsTr = document.createElement('th');
+    //     table.appendChild(totalsTr);
+    //     totalsTr.textContent= footerTotal[i];
 
         
         
     }
-}
+
 
 makingFooter();
 
