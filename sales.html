@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,6 +7,7 @@
     <title>Cookies Sales</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
+
 <body>
     <header>
 
@@ -14,11 +16,29 @@
 
     <main>
         <div id="table-div">
-        
+
         </div>
-
+        <form id="locationForm">
+            <fieldset>
+                <label for="nameField">Name</label>
+                <input type="text" id="nameField" name="nameField">
+                <br>
+                <label for="minCustomers">Min Customers</label>
+                <input type="number" id="minCustomers" name="minCustomers">
+                <br>
+                <label for="maxCustomers">Max Customers</label>
+                <input type="number" id="maxCustomers" name="maxCustomers">
+                <br>
+                <label for="avgCookies">Average Cookies</label>
+                <input type="number" id="avgCookies" name="avgCookies">
+                
+                <input type="submit">
+            </fieldset>
+        </form>
     </main>
+    <div id="newLocation">
 
+    </div>
 
     <footer>
 
@@ -26,4 +46,5 @@
 
     <script src="javascript/app.js"></script>
 </body>
+
 </html>

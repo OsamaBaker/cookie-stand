@@ -84,7 +84,7 @@ Location.prototype.render = function () {
 
     let totaltd = document.createElement('td');
     shopRow.appendChild(totaltd);
-    totaltd.textContent = `${this.cookiesPerDay}`
+    totaltd.textContent = `${this.cookiesPerDay}`;
 };
 
 
@@ -124,7 +124,7 @@ function makingFooter() {
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
     footerRow.appendChild(firstTh);
-    firstTh.textContent = 'Totals'
+    firstTh.textContent = 'Totals';
 
     let megaTotal=0;
     let totalEachHourAllShops = 0;
@@ -149,7 +149,7 @@ function makingFooter() {
     let megaTotalTh = document.createElement('th');
     footerRow.appendChild(megaTotalTh);
     megaTotalTh.textContent=megaTotal;
-    console.log(megaTotal);
+    // console.log(megaTotal);
 
 
 
@@ -165,6 +165,50 @@ function makingFooter() {
 
 
 makingFooter();
+
+
+// Making Location Form
+
+// get element form by id
+let locationForm = document.getElementById('locationForm');
+// console.log(locationForm);
+
+// adding event listener
+locationForm.addEventListener('submit', submitter);
+
+// creating the submitter function
+function submitter(event) {
+    event.preventDefault();
+    // console.log(event);
+
+    let name=event.target.nameField.value;
+    // console.log(name);
+
+    let minCustomers = event.target.minCustomers.value;
+    // console.log(minCustomers);
+    let maxCustomers = event.target.maxCustomers.value;
+    // console.log(maxCustomers);
+    //new instance of the constructor with new info
+    let addedLocation = new Location(name, minCustomers, maxCustomers, avgCookies);
+
+    // console.log(addedLocation);
+
+
+    let newInstance = document.createElement('tr');
+    table.appendChild(newInstance);
+    newInstance.textContent='';
+    // console.log(newInstance)
+    for (let i = 0; i < allShops.length; i++) {
+        
+        allShops[i].name;
+        allShops[i].render();
+        
+    }
+
+    function render2(){
+        
+    }
+};
 
 // // Seattle
 // const seattle={
