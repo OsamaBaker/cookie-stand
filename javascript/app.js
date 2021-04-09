@@ -33,8 +33,10 @@ Location.prototype.calcCustomersEachHour = function () {
 Location.prototype.calcCookiesEachHour = function () {
     for (let i = 0; i < hours.length; i++) {
 
+        
         this.cookiesEachHour.push(Math.floor(this.customersEachHour[i] * this.avgCookies));
         this.cookiesPerDay += this.cookiesEachHour[i];
+
     }
 };
 let parent = document.getElementById('table-div');
@@ -119,8 +121,8 @@ lima.calcCookiesEachHour();
 lima.render();
 
 // making footer function
+let footerRow = document.createElement('tr');
 function makingFooter() {
-    let footerRow = document.createElement('tr');
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
     footerRow.appendChild(firstTh);
@@ -188,6 +190,7 @@ function submitter(event) {
     // console.log(minCustomers);
     let maxCustomers = event.target.maxCustomers.value;
     // console.log(maxCustomers);
+    let avgCookies = event.target.avgCookies.value;
     //new instance of the constructor with new info
     let addedLocation = new Location(name, minCustomers, maxCustomers, avgCookies);
 
@@ -198,17 +201,21 @@ function submitter(event) {
     table.appendChild(newInstance);
     newInstance.textContent='';
     // console.log(newInstance)
-    for (let i = 0; i < allShops.length; i++) {
+    // for (let i = 0; i < allShops.length; i++) {
         
-        allShops[i].name;
-        allShops[i].render();
         
-    }
+    //     allShops[i].name;
+    //     allShops[i].render();
+    // }
+    addedLocation.calcCustomersEachHour();
+    addedLocation.calcCookiesEachHour();
+    addedLocation.render();
 
-    function render2(){
-        
-    }
+    
+    footerRow.textContent='';
+    makingFooter();
 };
+
 
 // // Seattle
 // const seattle={
